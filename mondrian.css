@@ -1,0 +1,104 @@
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	display: flex;
+}
+
+.wide-col {
+	height: 100%;
+	width: 65%;
+}
+
+.narrow-col {
+	height: 100%;
+	width: 35%;
+}
+
+.box {
+	height: 50%;
+	width: 100%;
+}
+
+/* While these two classes are empty, they are used as blank slates for code that is added inside of media breakpoints. */
+
+.kitten {
+	
+}
+
+.kitten2 {
+	
+}
+
+.blue {background-color: #0D11A8;}
+.red {background-color: #F50F0F;}
+.yellow {background-color: #FAE317;}
+
+
+/* https://philipwalton.github.io/solved-by-flexbox/demos/vertical-centering/ */
+/* If you're using 'display: flex' this class can be used to easily center horizontally! */
+.center-horizontal {
+	align-items: center;	
+}
+
+/* If you're using 'display: flex' this class can be used to easily center vertically! */
+.center-vertical {
+	justify-content: center;
+}
+
+.align {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Keep your image from overflowing it's parent DIV */
+.contain-image {
+	max-height: 75%;
+	max-width: 75%;
+}
+
+@media screen and (max-width: 800px) {	
+	body {
+		display: block;
+	}
+	.narrow-col {
+		display: flex;
+		height: 35%;
+		width: 100%;
+	}
+	.wide-col {
+		height: 65%;
+		width: 100%;
+	}
+	.box {
+		height: 100%;
+	}
+	
+	
+	/* The color of the blue box changes to a brown color, remniscent of coffee. This is done around when the screen is at an 800 px breakpoint. On top of this, a gif is added in the red box.*/
+	.blue {
+		background-color: #6A2B05;
+	}
+	
+	.gif1 {
+	content: url("images/kittyloaf.gif");
+	}
+}
+
+@media screen and (max-width: 500px) {	
+	.narrow-col {
+		display: block;
+	}
+	/* The color of the other two boxes also change into two more coffee-related colors at around the 500 px breakpoint. The kittyloaf gif is added to the formerly yellow box, therefore having two gifs on the same page.*/
+	.red {
+		background-color: #964315;
+	}
+	.yellow {
+		background-color: #BB6B24;
+	}
+
+	.gif2 {
+	content: url("images/kittyloaf.gif");
+	}
+}
